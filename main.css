@@ -14,7 +14,7 @@ body {
 	font-family: 'Quattrocento', serif;
 	font-weight: 400;
 	line-height: 1.75;
-	color: #000000;
+	color: #101010;
 }
 
 p {
@@ -59,5 +59,121 @@ small,
 }
 
 body {
-	background-image: ;
+	background-image: url(https://raw.githubusercontent.com/RAFriend1/personal-portfolio-webpage/main/Assets/background.jpg);
+	background-size: auto;
+	background-repeat: no-repeat;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefos */
+}
+
+body::-webkit-scrollbar {/*Chrome, Safari, Opera */
+	display: none;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/* Header */
+#navbar {
+	width:100%;
+	background-color: #929292;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	border-bottom: 2px solid #101010;
+	z-index: 5;
+}
+
+.nav-content {
+	display: flex;
+	width: 100%;
+	align-items: center;
+}
+
+.nav-content .logo {
+	display: flex;	
+	width: 5%;
+	font-size: 3rem;
+}
+
+.nav-content .logo img {
+	width: 100%;
+}
+
+.nav-content ul{
+	font-size: 18px;
+	font-weight: bold;
+	padding: 10px;
+	list-style: none;
+	width: 95%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.nav-content ul li{
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.nav-content ul li:last-child {
+	margin-right: 0;
+}
+
+.nav-content ul li a {
+	text-decoration: none;
+	color: #101010;
+	transition: all .1s ease-in-out;
+}
+
+.nav-content ul li a:hover {
+	color: #e3e3e3;
+}
+
+/* Welcome */
+#welcome-section {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	color: #101010;
+	transition: all .5s ease-in-out
+}
+
+#welcome-section:hover {
+	transform: scale(1.5);
+}
+
+/* Media Query */
+@media(min-width: 400px) {
+	.nav-content .logo {
+		width: 10%;
+	}
+}
+
+@media(min-width: 600px) {
+	.nav-content ul {
+		font-size: 24px;
+	}
+}
+
+.nav-content ul li a {
+	padding: 46px;
+}
+
+.nav-content ul i a:hover {
+	background-color: #e3e3e3;
+}
+
+#projects .cards {
+	grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 900px) {
+	#projects .cards {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
