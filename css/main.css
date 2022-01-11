@@ -1,12 +1,12 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Quattrocento:400|Oswald:400');
+
 html {
 	scroll-behavior: smooth;
 }
 
-/* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Quattrocento:400|Oswald:400');
-
 body {
-	font-family: 'Quattrocento', serif;
+	font-family: 'Quattrocento', sans-serif;
 	background-image: url('https://raw.githubusercontent.com/RAFriend1/personal-portfolio-webpage/main/Assets/background.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -52,7 +52,6 @@ h2 {
 .nav-content .logo {
 	display: flex;
 	width: 15%;
-	font-size: 3rem;
 }
 
 .nav-content .logo img {
@@ -60,13 +59,13 @@ h2 {
 }
 
 .nav-content ul {
-	font-size: 18px;
-	font-weight: bold;
-	padding: 0px;
-	list-style: none;
-	width: 85%;
 	display: flex;
 	justify-content: flex-end;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 0;
+	list-style: none;
+	width: 85%;
 }
 
 .nav-content ul li {
@@ -99,87 +98,11 @@ h2 {
 }
 
 #welcome-section:hover {
-	transform: scale(1.5);
-}
-
-/*=== Contact ===*/
-#contact {
-	color:#e3e3e3;
-	display: flex;
-	min-height: 80vh;
-	align-items: center;
-	text-align: center;
-	transition: all .5s ease-in-out;
-}
-
-#contact:hover {
-	transform: scale(1.5);	
-}
-
-#contact h2 {
-	margin-bottom: 0;
-}
-
-#contact ul {
-	padding: 0;
-	font-size: 30px;
-	list-style: none;
-	width: 100%;
-}
-
-#contact ul li {
-	display: inline-block;
-	margin-right: 40px;
-	margin-bottom: 15px;
-	transition: all .5s ease-in-out;
-}
-
-#contact ul li:last-child {
-	margin-right: 0;
-}
-
-#contact ul li:hover {
-	transform: scale(1.5) rotate(-15deg);
-}
-
-#contact ul li a {
-	text-decoration: none;
-	color: #e3e3e3;
-}
-
-/* Media Query */
-@media (min-width: 400px) {
-	.nav-content .logo {
-		width: 10%;
-	}
-}
-
-@media (min-width: 600px) {
-	.nav-content ul {
-		font-size: 24px;
-	}
-}
-
-.nav-content ul li a {
-	padding: 46px;
-}
-
-.nav-content ul i a:hover {
-	background-color: #e3e3e3;
-}
-
-#projects .cards {
-	grid-template-columns: 1fr 1fr;
-}
-
-@media (min-width: 900px) {
-	#projects .cards {
-		grid-template-columns: 1fr 1fr 1fr;
-	}
+	transform: scale(1.25);
 }
 
 /* Projects */
-#projects {
+#projects-section {
 	background-color: #e3e3e3;
 	padding: 20px 0;
 	min-height: 100vh;
@@ -187,38 +110,38 @@ h2 {
 	display: flex;
 }
 
-#projects .project-tile {
+#projects-section .project-tile {
 	padding-bottom: 30px;
 	padding-top: 73px;
 }
 
-#projects .cards {
+#projects-section .cards {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 20px;
 }
 
-#projects .cards .card {
+#projects-section .cards .card {
 	display: block;
 	width: 100%;
 	position: relative;
 	transition: all 1s ease-in-out;
 }
 
-.projects .card:hover {
+#projects-section .card:hover {
 	transform: rotate3d(0, 1, 0.5, 1turn);
 	position: relative;
 	z-index: 10;
 }
 
-#projects .cards .card img {
+#projects-section .cards .card img {
 	width: 100%;
 	max-height: 300px;
 	height: 100%;
 	border-radius: 4px;
 }
 
-#projects .cards .card figcaption {
+#projects-section .cards .card figcaption {
 	position: absolute;
 	z-index: 2;
 	color: #e3e3e3;
@@ -229,4 +152,104 @@ h2 {
 	text-align: center;
 	width: 100%;
 	background-color: rgb(0, 0, 0, 0.8);
+}
+
+/*=== Contact ===*/
+#contact-section {
+	color: #101010;
+	display: flex;
+	min-height: 80vh;
+	align-items: center;
+	text-align: center;
+	transition: all 0.5s ease-in-out;
+}
+
+#contact-section:hover {
+	transform: scale(1.5);
+}
+
+#contact-section h2 {
+	margin-bottom: 0;
+}
+
+#contact-section ul {
+	padding: 0;
+	font-size: 30px;
+	list-style: none;
+	width: 100%;
+}
+
+#contact-section ul li {
+	display: inline-block;
+	margin-right: 40px;
+	margin-bottom: 15px;
+	transition: all 0.5s ease-in-out;
+}
+
+#contact-section ul li:last-child {
+	margin-right: 0;
+}
+
+#contact-section ul li:hover {
+	transform: scale(1.5) rotate(-15deg);
+}
+
+#contact-section ul li a {
+	text-decoration: none;
+	color: #101010;
+}
+
+/* Footer */
+footer {
+	width: 100%;
+	background-color: #e3e3e3;
+	border-top: 2px solid #101010;
+}
+
+footer .footer-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 10vh;
+}
+
+footer .footer-content .logo {
+	min-width: 80px;
+	margin-right: 20px;
+}
+
+footer .footer-content .logo img {
+	width: 10%;
+}
+
+/* Media Query */
+@media (min-width: 400px) {
+	.nav-content .logo {
+		width: 10%;
+	}
+}
+
+@media (min-width: 650px) {
+	.nav-content ul {
+		font-size: 24px;
+	}
+
+	.nav-content ul li a {
+		padding: 46px;
+	}
+
+	.nav-content ul i a:hover {
+		background-color: #e3e3e3;
+		color: #929292;
+	}
+
+	#projects-section .cards {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (min-width: 900px) {
+	#projects-section .cards {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
